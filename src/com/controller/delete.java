@@ -14,9 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.dao.Dao;
 import com.dto.Dto;
 
-/**
- * Servlet implementation class Delete
- */
+
 @WebServlet("/delete")
 public class delete extends HttpServlet {
    private static final long serialVersionUID = 1L;
