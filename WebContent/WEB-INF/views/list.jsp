@@ -28,7 +28,7 @@ $(function(){
 		$('#search').modal('show');
 	});
 	
-	$('#searchbtn').click(function(){
+	/* $('#searchbtn').click(function(){
 		if($('#deptnoS').val()==""){
 			alert("id입력");
 			$('#deptnoS').focus();
@@ -60,7 +60,7 @@ $(function(){
 			});
 		}
 		
-	});
+	}); */
 });
 </script>
 </head>
@@ -69,7 +69,7 @@ $(function(){
 	<div class="row">
 		<div class="col-sm-4 col-md-12">
 			<div class="container">
-				<c:set var="deptlist" value="${requestScope.deptlist}"></c:set>
+				<c:set var="deptlist" value="${dtoList}"></c:set>
 				<table class="table" id="table">
 					<tr class="active" id="tr2">
 						<th>부서번호</th>
@@ -87,9 +87,9 @@ $(function(){
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="btn-group btn-group-md">
-							<a href="list" class="btn btn-success" role="button">전체조회</a>
+							<a href="list.do" class="btn btn-success" role="button">전체조회</a>
 							<button type="button" class="btn btn-success" id="btnS">조건조회</button>
-							<a href="insert?type=page" class="btn btn-success" role="button">부서추가</a>
+							<a href="insert.do?type=page" class="btn btn-success" role="button">부서추가</a>
 							<button type="button" class="btn btn-success" data-toggle="modal"
 								data-target="#update">부서수정</button>
 							<button type="button" class="btn btn-success" data-toggle="modal"
@@ -110,8 +110,8 @@ $(function(){
 					<h4 class="modal-title">수정 번호</h4>
 				</div>
 				<div class="modal-body">
-					<form action="search">
-						<input type="hidden" name="type" value="update"/>
+					<form action="update.do">
+						<!-- <input type="hidden" name="type" value="update"/> -->
 						수정할 부서번호: <input type="text" name="deptno" /><input type="submit"
 							value="검색" />
 					</form>
@@ -132,10 +132,10 @@ $(function(){
 					<h4 class="modal-title">삭제 번호</h4>
 				</div>
 				<div class="modal-body">
-					<form action="delete">
-						<input type="hidden" name="type" value="update"/>
+					<form action="delete.do">
+						<!-- <input type="hidden" name="type" value="delete"/> -->
 						삭제할 부서번호: <input type="text" name="deptno" /><input type="submit"
-							value="검색" />
+							value="삭제" />
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -154,10 +154,10 @@ $(function(){
 					<h4 class="modal-title">조건 검색 번호</h4>
 				</div>
 				<div class="modal-body">
-					<form>
-						<input type="hidden" name="type" value="search"/>
-						검색할 부서번호: <input type="text" name="deptno" id="deptnoS" /><input type="button"
-							id="searchbtn" value="검색" />
+					<form action="search.do">
+						<!-- <input type="hidden" name="type" value="search"/> -->
+						검색할 부서번호: <input type="text" name="deptno" id="deptnoS" />
+						<input type="submit" id="searchbtn" value="검색" />
 					</form>
 				</div>
 				<div class="modal-footer">

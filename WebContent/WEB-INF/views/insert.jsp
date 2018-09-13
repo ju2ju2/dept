@@ -67,7 +67,7 @@ div {
 		<div class="row">
 			<div class="col-md-4">&nbsp;</div>
 			<div class="col-md-4">
-				<form class="content" action="insert" method="post">
+				<form class="content" action="" method="post">
 					<input type="hidden" name="type" value="insert"/>
 					<div>
 						부서번호 :&nbsp;<input type="text" name="deptno" id="deptno" class="a" />
@@ -79,7 +79,7 @@ div {
 							class="a" />
 					</div>
 					<div>
-						부서번호 :&nbsp;<input type="text" name="loc" class="a" />
+						근무지역 :&nbsp;<input type="text" name="loc" class="a" />
 					</div>
 					<div id="dd">
 						<input class="btn btn-success btn-xs" role="button" id="submit" type="submit"

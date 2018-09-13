@@ -38,18 +38,18 @@ div {
 		<div class="row">
 			<div class="col-md-4">&nbsp;</div>
 			<div class="col-md-4">
-				<form class="content" action="update" method="post">
+				<form class="content" action="update.do" method="post">
 					<div>
 						부서번호 :&nbsp;<input type="text" name="deptno" class="a"
-							value="${requestScope.deptno}" readonly="readonly" />
+							value="${dto.deptno}" readonly="readonly" />
 					</div>
 					<div>
 						부서명 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="dname"
-							class="a" value="${requestScope.dname}" />
+							class="a" value="${dto.dname}" />
 					</div>
 					<div>
 						근무위치 : <input type="text" name="loc" class="a"
-							value="${requestScope.loc}" />
+							value="${dto.loc}" />
 					</div>
 					<div>
 						<input class="btn btn-success btn-xs" role="button" type="submit"
